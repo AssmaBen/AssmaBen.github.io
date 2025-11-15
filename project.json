@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Projet Blender 1",
+    "img": "images/projet1.jpg",
+    "blend": "files/projet1.blend",
+    "pdf": "files/projet1.pdf"
+  },
+  {
+    "name": "Projet Blender 2",
+    "img": "images/projet2.jpg",
+    "blend": "files/projet2.blend",
+    "pdf": "files/projet2.pdf"
+  }
+]
