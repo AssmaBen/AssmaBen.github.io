@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assma Benhabyles - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f7f7fa;
+      color: #261f33;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(102, 75, 132, 0.184);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      color: #310a3e;
+    }
+
+    nav h1 span {
+      color: #330749;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #390a6d;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #350b5f, #1f0724);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      padding: 4rem 5%;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text h2 span {
+      color: #cdc3cc;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 1rem 0 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.98);
+      color: #3a0d43;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #2c0741;
+      color: white;
+    }
+
+    .hero img {
+      width: 300px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(201, 137, 224, 0.814);
+    }
+
+    #about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      padding: 6rem 5%;
+      background-color: white;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .about-left img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(50, 7, 62, 0.916);
+    }
+
+    .about-right {
+      max-width: 600px;
+    }
+
+    .about-right h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #69137c;
+    }
+
+    .about-right p {
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .about-right a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: #571785;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .about-right a:hover {
+      background: #601a70;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 3px 6px rgba(175, 85, 190, 0.469);
+      padding: 1.5rem;
+      transition: transform 0.6s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-30px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+  /* Upload buttons */
+.upBtn {
+  background-color:#8736b8;
+  color:white;
+  padding:10px 25px;
+  margin: 8px;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:bold;
+  display:inline-block;
+}
+
+/* Project line card */
+/* ============================
+   BLENDER PROJECTS – UPDATED
+============================ */
+
+/* ==========================================================
+   🌸 Modern Blender Project Cards
+   ========================================================== */
+
+/* -------------------------------
+   🌟 MODERN BLENDER PROJECT STYLE
+--------------------------------*/
+
+.blender-title {
+  text-align:center;
+  font-size:2.8rem;
+  color:#3a0066;
+  margin-bottom:50px;
+  font: weight 4px;;
+}
+
+/* Container */
+.blender-container {
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Card */
+/* Card */
+.blender-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+  border-radius: 10px;
+
+  padding: 9px 9px;       /* 🔹 Hauteur réduite */
+  gap: 2px;
+
+  max-width: 1000px;         /* 🔹 Largeur réduite (cartes plus fines) */
+  margin:initial  ;         /* centre la carte */
+
+  box-shadow: 0 4px 14px rgba(80, 0, 120, 0.10);
+  transition: 0.25s ease;
+}
+
+
+.blender-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 38px rgba(80, 0, 120, 0.22);
+}
+
+/* Thumbnail */
+.blender-thumb {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 0px solid #eadcff;
+}
+
+/* Info */
+.blender-info h3 {
+  color:#35004f;
+  margin-bottom:6px;
+  font-size:1.9rem;
+  font-weight:700;
+}
+
+.blender-info span {
+  color:#7a6595;
+  font-size:1.1rem;
+}
+
+/* Buttons column */
+.blender-actions {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+/* Buttons design */
+.blender-btn {
+  width:150px;
+  padding:12px 0;
+  border-radius:16px;
+  font-size:1.1rem;
+  font-weight:700;
+  text-align:center;
+  border:none;
+  cursor:pointer;
+  transition:0.25s ease;
+  text-decoration:none;
+  display:block;
+}
+
+.render-btn {
+  background:#f0d8ff;
+  color:#4d0073;
+}
+
+.render-btn:hover {
+  background:#d7a3ff;
+}
+
+.blend-btn {
+  background:#efddff;
+  color:#4d0073;
+}
+
+.blend-btn:hover {
+  background:#d7a3ff;
+}
+
+.pdf-btn {
+  background:#e9d5ff;
+  color:#4d0073;
+}
+
+.pdf-btn:hover {
+  background:#d7a3ff;
+}
+
+/* Rendered Image Page */
+#renderPage {
+  display:none;
+  text-align:center;
+}
+
+.render-img {
+  width:100%;
+  max-width:900px;
+  border-radius:0px;
+  margin-top:20px;
+}
+
+.render-actions {
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.big-btn {
+  padding:14px 40px;
+  border-radius:40px;
+  border:none;
+  font-size:1.25rem;
+  font-weight:700;
+  cursor:pointer;
+  background:#e8d2ff;
+  color:#4a0062;
+}
+
+.big-btn:hover {
+  background:#cba0ff;
+}
+
+  
+ .render-page {
+  text-align:center;
+  padding:60px 20px;
+  background:#f7f3ff;
+  min-height:100vh;
+}
+
+.render-title {
+  font-size:2.8rem;
+  color:#3a0066;
+  margin-bottom:40px;
+  font-weight:800;
+}
+
+.render-img {
+  width:100%;
+  max-width:850px;
+  border-radius:2px;
+  box-shadow:0 12px 38px rgba(0,0,0,0.15);
+}
+
+.render-actions {
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+.big-btn {
+  padding:16px 48px;
+  border-radius:45px;
+  border:none;
+  font-size:1.3rem;
+  font-weight:700;
+  cursor:pointer;
+  background:#e8d2ff;
+  color:#4a0062;
+  transition:0.25s ease;
+}
+
+.big-btn:hover {
+  background:#d3a8ff;
+  transform:translateY(-3px);
+}
+
+.img-normal {
+  width: 90%;
+  max-width: 700px;
+  display: block;
+  margin: auto;
+  border-radius: 18px;
+}
+
+
+
+   /* 🌸 Modern confirmation popup */
+#confirmBox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 0, 70, 0.45);
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.3s ease;
+}
+
+#confirmBox.hidden {
+  display: none;
+}
+
+.confirm-content {
+  background: linear-gradient(135deg, #ffffff, #f4e6ff);
+  padding: 55px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(100, 50, 150, 0.3);
+  text-align: center;
+  max-width: 760px;
+  width: 333%;
+  animation: fadeInUp 0.4s ease;
+}
+
+.confirm-content h3 {
+  color: #4b1a73;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.confirm-content p {
+  color: #5c4a6d;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ✅ Modern buttons */
+.confirm-buttons button {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+}
+
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  background: white;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #7b2cbf;
+  box-shadow: 0 0 6px rgba(123, 44, 191, 0.3);
+}
+
+#contactForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-btn {
+  width: 60%;
+  margin: 20px auto 0 auto;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 2px solid #3a1a5f;
+  background: white;
+  color: #4a0561;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #4a0561;
+  color: white;
+  transform: scale(1.05);
+}
+
+#footer {
+  background-color: #4b007d; /* Violet foncé élégant */
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+#footer p {
+  margin: 0;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Nadia <span>Benhabyles</span></h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blender-projects">Blender Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+    <div class="hero-text">
+      <h2>Hi, I'm <span>Nadia Benhabyles</span></h2>
+      <p>Master’s student in Data Engineering & Web Technologies at Farhat Abbas University- Setif</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View My Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+    <img src="mypic.jpg" alt="Assma" />
+  </section>
+
+  <section id="about" class="fade-in">
+    <div class="about-left">
+      <img src="mypic.jpg" alt="Assma" />
+    </div>
+    <div class="about-right">
+      <h2>About Me</h2>
+      <p>I'm passionate about software development, web technologies, and data engineering.
+        Currently pursuing my Master 2 in Data Engineering and Web Technology, I enjoy building modern web projects that combine creativity and functionality.</p>
+      <a href="#projects">My Work</a>
+    </div>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="1600w-bHiX_0QpJxE.webp" alt="E-commerce" />
+        <h3>🛍️ Watch & Accessories E-commerce</h3>
+        <p>A responsive online store for watches and accessories.</p>
+      </div>
+
+      <a href="https://ecorecycle-nine.vercel.app/" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+        <img src="d.jpg" alt="Recycling" />
+        <h3>♻️ EcoRecycle "Recycling Awareness Website"</h3>
+        <p>A website to raise awareness about environmental recycling.</p>
+      </a>
+
+      <div class="project-card" onclick="window.open('file:///C:/Users/hp%20elitebook/Downloads/tpwe3D/weather_app/weather4.html', '_blank')" style="cursor: pointer;">
+        <img src="06c4f70ec5931e2342e703e8a3f0a253.png" alt="Weather App" />
+        <h3>☁️ Weather Web App</h3>
+        <p>A weather application using a live API to display forecasts.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images.jpg" alt="BuddyBot" />
+        <h3>🤖 BuddyBot (ChatGPT-like)</h3>
+        <p>An intelligent chatbot made with Python</p>
+      </div>
+    </div>
+  </section>
+
+<section id="blender-projects" class="fade-in" style="background:#f7f3ff; padding:80px 20px;">
+  <h2 class="blender-title">Blender Projects</h2>
+
+  <!-- Container -->
+  <div id="blenderGrid" class="blender-container"></div>
+
+
+</section>
+
+
+
+
+
+
+  <section id="skills" style="background-color: #f9f9f9; padding: 60px 0; text-align: center;">
+    <h2 style="font-size: 2em; color: #111011; margin-bottom: 20px;">My Skills</h2>
+    <p style="color: #2a2828; margin-bottom: 40px;">Here are some of the technologies and tools I work with:</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px; margin: auto;">
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">☕ Java</div>
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">🐍 Python</div>
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">🌐 HTML</div>
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">🎨 CSS</div>
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">⚡ JavaScript</div>
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">🐙 Git & GitHub</div>
+      <div style="background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 15px 25px;">🧠 Data Engineering</div>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in" style="padding: 80px 0; background-color:#f5f4fa;">
+  <h2 style="text-align:center; font-size:2rem; color:#29203a; margin-bottom:40px;">
+    Contact Me
+  </h2>
+
+  <form id="contactForm" style="max-width:600px; margin:auto; text-align:center;">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message..." required></textarea>
+
+    <button type="submit" class="contact-btn">Send Message</button>
+  </form>
+</section>
+<footer id="footer">
+  <p>benhabyles.assma@gmail.com • 0665617973</p>
+</footer>
+
+  
+
+ <script>
+document.getElementById("contactForm").addEventListener("submit", e => {
+  e.preventDefault();
+  alert("Thank you for your message 💌 Nadia will reply soon!");
+  e.target.reset();
+});
+
+
+/* ------------------ FADE-IN EFFECT ------------------ */
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+});
+fadeElements.forEach(el => observer.observe(el));
+
+/* ---------------------------------------------------
+      Blender Projects (Static GitHub Version)
+----------------------------------------------------*/
+const blenderProjects = [
+  {
+    name: "Robot Project",
+    img: "BlenderProjects/Render-Robot.png",
+    blend: "BlenderProjects/Robot-TP1.blend",
+    pdf: "BlenderProjects/raportTP1.pdf"
+  }
+];
+
+function renderProjects() {
+  const grid = document.getElementById("blenderGrid");
+  grid.innerHTML = "";
+
+  blenderProjects.forEach(p => {
+    grid.innerHTML += `
+      <div class="blender-card">
+        <img src="${p.img}" class="blender-thumb">
+
+        <div class="blender-info">
+          <h3>${p.name}</h3>
+          <span>Blender Project • Files</span>
+        </div>
+
+        <div class="blender-actions">
+          <button class="blender-btn render-btn" onclick="openRender('${p.img}')">
+            View Render
+          </button>
+
+          <a class="blender-btn blend-btn" href="${p.blend}" download>
+            .blend
+          </a>
+
+          <a class="blender-btn pdf-btn" href="${p.pdf}" download>
+            PDF
+          </a>
+        </div>
+      </div>
+    `;
+  });
+}
+
+
+
+
+
+// ---------- FORCE DOWNLOAD ----------
+function forceDownload(filePath) {
+  const link = document.createElement("a");
+  link.href = filePath;
+  link.download = filePath.split("/").pop();
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+
+
+
+// ---------- PAGE RENDERED IMAGE -------------
+function openRender(imgPath) {
+  document.body.innerHTML = `
+    <div class="render-page">
+      <h1 class="render-title">Rendered Image</h1>
+
+      <img src="${imgPath}" alt="Rendered Image" class="img-normal">
+
+      <div class="render-actions">
+        
+        <!-- 🔙 RETOUR -->
+        <button class="big-btn" onclick="location.reload()">← Back</button>
+
+        <!-- ⬇ BOUTON DOWNLOAD MODERNE -->
+        <a href="${imgPath}" download class="big-btn">⬇ Download</a>
+
+      </div>
+    </div>
+  `;
+}
+
+
+
+
+
+/* Run renderer */
+renderProjects();
+
+
+</script>
+
+
+
+
+  <!-- ✅ Boîte de confirmation personnalisée -->
+<div id="confirmBox" class="hidden">
+  <div class="confirm-content">
+    <h3>Are you sure you want to delete this project?</h3>
+    <p>This action cannot be undone.</p>
+    <div class="confirm-buttons">
+      <button id="confirmYes">Yes, delete</button>
+      <button id="confirmNo">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
