@@ -217,93 +217,218 @@
    BLENDER PROJECTS – UPDATED
 ============================ */
 
-#blenderGrid .project-card {
+/* ==========================================================
+   🌸 Modern Blender Project Cards
+   ========================================================== */
+
+/* -------------------------------
+   🌟 MODERN BLENDER PROJECT STYLE
+--------------------------------*/
+
+.blender-title {
+  text-align:center;
+  font-size:2.8rem;
+  color:#3a0066;
+  margin-bottom:50px;
+  font: weight 4px;;
+}
+
+/* Container */
+.blender-container {
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Card */
+/* Card */
+.blender-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #faf3ff;              /* violet clair doux */
-  border-radius: 8px;
-  padding: 12px 18px;
-  margin: 10px auto;
-  width: 90%;
-  max-width: 900px;
-  box-shadow: 0 3px 6px rgba(120, 60, 160, 0.25); /* violet soft */
+
+  background: white;
+  border-radius: 10px;
+
+  padding: 9px 10px;       /* 🔹 Hauteur réduite */
+  gap: 12px;
+
+  max-width: 1100px;         /* 🔹 Largeur réduite (cartes plus fines) */
+  margin:initial  ;         /* centre la carte */
+
+  box-shadow: 0 4px 14px rgba(80, 0, 120, 0.10);
+  transition: 0.25s ease;
 }
 
-#blenderGrid img {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
+
+.blender-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 38px rgba(80, 0, 120, 0.22);
+}
+
+/* Thumbnail */
+.blender-thumb {
+  width: 130px;
+  height: 130px;
   object-fit: cover;
-  border: 2px solid #d8b4f8;        /* contour lilas */
+  border-radius: 18px;
+  border: 4px solid #eadcff;
 }
 
-.project-info {
-  flex: 1;
-  margin-left: 15px;
-  color: #4a0561;                    /* violet foncé */
-  font-weight: 600;
-  font-size: 1rem;
+/* Info */
+.blender-info h3 {
+  color:#35004f;
+  margin-bottom:6px;
+  font-size:1.9rem;
+  font-weight:700;
 }
 
-/* ACTION BUTTONS */
-.actions {
-  display: flex;
-  gap: 10px;
+.blender-info span {
+  color:#7a6595;
+  font-size:1.1rem;
 }
 
-/* IMAGE BUTTON (nouveau) */
-.imgBtn {
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: 0.3s ease;
-  background: #eaddff;              /* lavande */
-  color: #4a0561;
+/* Buttons column */
+.blender-actions {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 
-.imgBtn:hover {
-  background: #8e39c2;              /* violet intense */
-  color: white;
+/* Buttons design */
+.blender-btn {
+  width:150px;
+  padding:12px 0;
+  border-radius:16px;
+  font-size:1.1rem;
+  font-weight:700;
+  text-align:center;
+  border:none;
+  cursor:pointer;
+  transition:0.25s ease;
+  text-decoration:none;
+  display:block;
 }
 
-/* BLEND + PDF BUTTONS */
-.blendBtn,
-.pdfBtn {
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: 0.3s ease;
-  background: #f0e1ff;              /* violet pastel */
-  color: #4a0561;
+.render-btn {
+  background:#f0d8ff;
+  color:#4d0073;
 }
 
-.blendBtn:hover,
-.pdfBtn:hover {
-  background: #8921ac;
-  color: white;
+.render-btn:hover {
+  background:#d7a3ff;
 }
 
-/* DELETE BUTTON (si tu en réutilises un jour) */
-.delete-btn {
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid #d3c0dd;
-  cursor: pointer;
-  font-size: 0.9rem;
-  background: #f7e9ff;
-  color: #5e065e;
-  transition: 0.3s ease;
+.blend-btn {
+  background:#efddff;
+  color:#4d0073;
 }
 
-.delete-btn:hover {
-  background: #a421a4;
-  color: white;
+.blend-btn:hover {
+  background:#d7a3ff;
 }
+
+.pdf-btn {
+  background:#e9d5ff;
+  color:#4d0073;
+}
+
+.pdf-btn:hover {
+  background:#d7a3ff;
+}
+
+/* Rendered Image Page */
+#renderPage {
+  display:none;
+  text-align:center;
+}
+
+.render-img {
+  width:100%;
+  max-width:900px;
+  border-radius:18px;
+  margin-top:20px;
+}
+
+.render-actions {
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.big-btn {
+  padding:14px 40px;
+  border-radius:40px;
+  border:none;
+  font-size:1.25rem;
+  font-weight:700;
+  cursor:pointer;
+  background:#e8d2ff;
+  color:#4a0062;
+}
+
+.big-btn:hover {
+  background:#cba0ff;
+}
+
+  
+ .render-page {
+  text-align:center;
+  padding:60px 20px;
+  background:#f7f3ff;
+  min-height:100vh;
+}
+
+.render-title {
+  font-size:2.8rem;
+  color:#3a0066;
+  margin-bottom:40px;
+  font-weight:800;
+}
+
+.render-img {
+  width:100%;
+  max-width:850px;
+  border-radius:22px;
+  box-shadow:0 12px 38px rgba(0,0,0,0.15);
+}
+
+.render-actions {
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+.big-btn {
+  padding:16px 48px;
+  border-radius:45px;
+  border:none;
+  font-size:1.3rem;
+  font-weight:700;
+  cursor:pointer;
+  background:#e8d2ff;
+  color:#4a0062;
+  transition:0.25s ease;
+}
+
+.big-btn:hover {
+  background:#d3a8ff;
+  transform:translateY(-3px);
+}
+
+.img-normal {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: auto;
+  border-radius: 18px;
+}
+
+
 
    /* 🌸 Modern confirmation popup */
 #confirmBox {
@@ -499,14 +624,17 @@
     </div>
   </section>
 
-<section id="blender-projects" class="fade-in" style="background-color:#f3eff6; padding:60px 20px;">
-  <h2 style="color:#3a0c51; font-size:2rem; margin-bottom:25px; text-align:center;">
-    Blender Projects
-  </h2>
+<section id="blender-projects" class="fade-in" style="background:#f7f3ff; padding:80px 20px;">
+  <h2 class="blender-title">Blender Projects</h2>
 
-  <!-- Container où les projets s’affichent -->
-  <div id="blenderGrid"></div>
+  <!-- Container -->
+  <div id="blenderGrid" class="blender-container"></div>
+
+
 </section>
+
+
+
 
 
 
@@ -564,48 +692,90 @@ fadeElements.forEach(el => observer.observe(el));
 /* ---------------------------------------------------
       Blender Projects (Static GitHub Version)
 ----------------------------------------------------*/
-
-/* ------------------ BLENDER PROJECTS DISPLAY ------------------ */
-
-/* 1️⃣  Liste de tes projets Blender */
 const blenderProjects = [
   {
-    name: "Projet Robot",
+    name: "Robot Project",
     img: "BlenderProjects/randerimagerobot.png",
     blend: "BlenderProjects/robot2.blend",
     pdf: "BlenderProjects/raportTP1.pdf"
   }
 ];
 
-/* 2️⃣ Affichage dynamique */
 function renderProjects() {
-  const blenderGrid = document.getElementById("blenderGrid");
-  blenderGrid.innerHTML = "";
+  const grid = document.getElementById("blenderGrid");
+  grid.innerHTML = "";
 
   blenderProjects.forEach(p => {
-    let card = document.createElement("div");
-    card.className = "project-card";
+    grid.innerHTML += `
+      <div class="blender-card">
+        <img src="${p.img}" class="blender-thumb">
 
-   card.innerHTML = `
-  <img src="${p.img}" alt="${p.name}">
-  
-  <div class="project-info">${p.name}</div>
+        <div class="blender-info">
+          <h3>${p.name}</h3>
+          <span>Blender Project • Files</span>
+        </div>
 
-  <div class="actions">
-    <a class="blendBtn" href="${p.img}" download>Image</a>
-    <a class="blendBtn" href="${p.blend}" download>.blend</a>
-    <a class="pdfBtn" href="${p.pdf}" download>PDF</a>
-  </div>
-`;
+        <div class="blender-actions">
+          <button class="blender-btn render-btn" onclick="openRender('${p.img}')">
+            View Render
+          </button>
 
+          <a class="blender-btn blend-btn" href="${p.blend}" download>
+            .blend
+          </a>
 
-
-
-
-    blenderGrid.appendChild(card);
+          <a class="blender-btn pdf-btn" href="${p.pdf}" download>
+            PDF
+          </a>
+        </div>
+      </div>
+    `;
   });
 }
 
+
+
+
+
+// ---------- FORCE DOWNLOAD ----------
+function forceDownload(filePath) {
+  const link = document.createElement("a");
+  link.href = filePath;
+  link.download = filePath.split("/").pop();
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+
+
+
+// ---------- PAGE RENDERED IMAGE -------------
+function openRender(imgPath) {
+  document.body.innerHTML = `
+    <div class="render-page">
+      <h1 class="render-title">Rendered Image</h1>
+
+      <img src="${imgPath}" alt="Rendered Image" class="img-normal">
+
+      <div class="render-actions">
+        
+        <!-- 🔙 RETOUR -->
+        <button class="big-btn" onclick="location.reload()">← Back</button>
+
+        <!-- ⬇ BOUTON DOWNLOAD MODERNE -->
+        <a href="${imgPath}" download class="big-btn">⬇ Download</a>
+
+      </div>
+    </div>
+  `;
+}
+
+
+
+
+
+/* Run renderer */
 renderProjects();
 
 
@@ -629,3 +799,4 @@ renderProjects();
 
 </body>
 </html>
+s
